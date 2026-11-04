@@ -41,3 +41,18 @@ Syntaxe JavaScript vérifiée avec Node. Tests de planification, validation d'im
 ## Licence
 
 Code original Mémo : licence MIT incluse. Anki reste la propriété de ses contributeurs et son code est distribué selon sa propre licence AGPL-3.0-or-later et les exceptions décrites dans son dépôt. Le présent téléchargement ne contient pas les sources d'Anki.
+
+## Publier avec GitHub Pages
+
+Le dossier `docs/` contient une copie prête à publier de l’application.
+
+1. Ouvrez **Settings → Pages** dans ce dépôt.
+2. Dans **Build and deployment**, choisissez **Deploy from a branch**.
+3. Sélectionnez la branche **main**, le dossier **/docs**, puis **Save**.
+4. Attendez la fin du déploiement GitHub Pages. L’adresse attendue est https://ploomas.github.io/memo-flashcards/ (elle ne fonctionne qu’après activation et déploiement).
+
+GitHub Pages pour un dépôt privé nécessite une offre GitHub compatible. Si votre offre ne le permet pas, GitHub proposera de changer d’offre ou de rendre le dépôt public ; choisissez explicitement ce qui vous convient. La visibilité du dépôt n’a pas été modifiée par cette configuration.
+
+Après modification de `dist/`, exécutez `python3 scripts/prepare-pages.py`, puis committez et poussez `dist/` et `docs/`. Sur iPad sans Python, recopiez les fichiers modifiés de `dist/` vers `docs/`.
+
+Les cartes sont liées à l’adresse du site : pour passer de l’ancien hébergement à GitHub Pages, exportez la collection JSON sur l’ancien site, puis importez-la sur le nouveau.
